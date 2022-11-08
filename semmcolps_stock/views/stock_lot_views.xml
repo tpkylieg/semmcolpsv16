@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+    <!--    Lot Form View Inherited-->
+    <record id="view_production_lot_form_semmcolps_stock" model="ir.ui.view">
+        <field name="name">stock.production.lot.form.semmcolps.stock</field>
+        <field name="model">stock.lot</field>
+        <field name="inherit_id" ref="stock.view_production_lot_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='ref']" position="after">
+                <field name="supplier_number" readonly="1"/>
+            </xpath>
+        </field>
+    </record>
+
+    <!--    Lot Tree View Inherited-->
+    <record id="view_production_lot_tree_inherit_semmcolps_stockk" model="ir.ui.view">
+        <field name="name">view.production.lot.tree.inherit.semmcolps.stockk</field>
+        <field name="model">stock.lot</field>
+        <field name="inherit_id" ref="stock.view_production_lot_tree"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='name']" position="after">
+                <field name="supplier_number" readonly="1"/>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>
